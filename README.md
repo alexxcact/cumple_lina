@@ -14,4 +14,4 @@ Abre `index.html` en un navegador, o sirve esta carpeta con un servidor estátic
 
 Los archivos originales de WhatsApp se conservan en `images`, pero se excluyen del repositorio de publicación. Los dos videos tampoco se publican.
 
-La carpeta `dist` contiene la copia estática que se publica en Sites.
+La carpeta `dist` contiene la copia estática que se publica en GitHub Pages. Cada actualización de la rama `master` ejecuta el flujo de despliegue en `.github/workflows/static.yml`.
