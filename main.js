@@ -1,6 +1,7 @@
 const intro = document.getElementById('intro');
 const openSurprise = document.getElementById('open-surprise');
 const pageBehindIntro = document.querySelectorAll('.site-header, main, footer');
+document.documentElement.classList.add('is-locked');
 pageBehindIntro.forEach((element) => { element.inert = true; });
 
 openSurprise.addEventListener('click', () => {
@@ -12,6 +13,7 @@ openSurprise.addEventListener('click', () => {
     window.setTimeout(() => {
       intro.hidden = true;
       document.body.classList.remove('is-locked');
+      document.documentElement.classList.remove('is-locked');
       pageBehindIntro.forEach((element) => { element.inert = false; });
       window.scrollTo(0, 0);
       document.getElementById('hero-title').focus({ preventScroll: true });
@@ -39,7 +41,13 @@ photoDialog.addEventListener('click', (event) => {
 
 document.getElementById('celebrate-button').addEventListener('click', (event) => {
   const box = event.currentTarget.getBoundingClientRect();
-  const colors = ['#d86970', '#e9a15b', '#f2c86a', '#bc8ca7', '#f7e8d5'];
+  const colors = [
+    'var(--color-accent)',
+    'var(--color-accent-soft)',
+    'var(--color-envelope)',
+    'var(--color-envelope-light)',
+    'var(--color-paper-light)'
+  ];
   for (let i = 0; i < 42; i += 1) {
     const piece = document.createElement('span');
     piece.className = 'confetti-piece';

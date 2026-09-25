@@ -1,0 +1,47 @@
+:root {
+  --color-paper: oklch(97% 0.012 80);
+  --color-paper-warm: oklch(94% 0.023 49);
+  --color-paper-light: oklch(99% 0.006 85);
+  --color-ink: oklch(25% 0.045 17);
+  --color-muted: oklch(48% 0.034 24);
+  --color-rule: oklch(84% 0.025 38);
+  --color-accent: oklch(54% 0.105 18);
+  --color-accent-ink: oklch(99% 0.006 85);
+  --color-accent-dark: oklch(41% 0.095 16);
+  --color-accent-soft: oklch(80% 0.065 31);
+  --color-envelope: oklch(74% 0.075 28);
+  --color-envelope-light: oklch(84% 0.062 30);
+  --color-shadow: oklch(25% 0.045 17 / 0.14);
+  --color-shadow-strong: oklch(25% 0.045 17 / 0.27);
+  --color-overlay: oklch(18% 0.025 18 / 0.78);
+  --color-focus: oklch(43% 0.14 18);
+
+  --font-display: 'Iowan Old Style', 'Baskerville', 'Palatino Linotype', Georgia, serif;
+  --font-body: Arial, Helvetica, sans-serif;
+  --font-hand: Pacifico, cursive;
+
+  --space-2xs: 0.5rem;
+  --space-xs: 0.75rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4.5rem;
+  --space-3xl: 7rem;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-body: 1rem;
+  --text-lead: 1.125rem;
+  --text-letter: 1.2rem;
+  --text-display: clamp(4rem, 7vw, 7.25rem);
+
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-short: 200ms;
+  --dur-medium: 440ms;
+  --dur-long: 750ms;
+  --radius-small: 3px;
+  --radius-pill: 999px;
+}

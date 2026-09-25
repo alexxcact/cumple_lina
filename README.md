@@ -9,9 +9,9 @@ Abre `index.html` en un navegador, o sirve esta carpeta con un servidor estátic
 ## Personalización
 
 - El texto de la carta está en `index.html`.
-- Los estilos están en `main.css`.
+- Los estilos están en `main.css` y los colores, fuentes y espacios en `tokens.css`.
 - Las fotos que usa la página son `images/lina-1.jpeg` a `images/lina-5.jpeg`.
 
 Los archivos originales de WhatsApp se conservan en `images`, pero se excluyen del repositorio de publicación. Los dos videos tampoco se publican.
 
-La carpeta `dist` contiene la copia estática que se publica en GitHub Pages. Cada actualización de la rama `master` ejecuta el flujo de despliegue en `.github/workflows/static.yml`.
+La carpeta `dist` contiene la copia estática que se publica en GitHub Pages. Cada actualización de la rama `master` ejecuta el flujo de despliegue en `.github/workflows/static.yml`. En móvil, la galería se recorre deslizando las fotos.

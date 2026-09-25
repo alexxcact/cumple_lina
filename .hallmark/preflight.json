@@ -1,0 +1,9 @@
+{
+  "scanned_at": "2026-09-25",
+  "framework": "vanilla HTML, CSS and JavaScript",
+  "font_stack": "Georgia for display, Arial for body, local Pacifico for handwritten accents",
+  "palette": "cream paper, warm pink and deep plum custom properties in main.css",
+  "motion": "CSS envelope opening and JavaScript confetti; no motion library",
+  "spacing": "ad hoc spacing, no named scale",
+  "design_md": false
+}
