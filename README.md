@@ -13,3 +13,5 @@ Abre `index.html` en un navegador, o sirve esta carpeta con un servidor estátic
 - Las fotos que usa la página son `images/lina-1.jpeg` a `images/lina-5.jpeg`.
 
 Los archivos originales de WhatsApp se conservan en `images`, pero se excluyen del repositorio de publicación. Los dos videos tampoco se publican.
+
+La carpeta `dist` contiene la copia estática que se publica en Sites.
