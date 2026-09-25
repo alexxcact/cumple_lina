@@ -1,3 +1,24 @@
+const intro = document.getElementById('intro');
+const openSurprise = document.getElementById('open-surprise');
+const pageBehindIntro = document.querySelectorAll('.site-header, main, footer');
+pageBehindIntro.forEach((element) => { element.inert = true; });
+
+openSurprise.addEventListener('click', () => {
+  openSurprise.disabled = true;
+  intro.classList.add('is-opening');
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  window.setTimeout(() => {
+    intro.classList.add('is-revealing');
+    window.setTimeout(() => {
+      intro.hidden = true;
+      document.body.classList.remove('is-locked');
+      pageBehindIntro.forEach((element) => { element.inert = false; });
+      window.scrollTo(0, 0);
+      document.getElementById('hero-title').focus({ preventScroll: true });
+    }, reducedMotion ? 0 : 550);
+  }, reducedMotion ? 0 : 850);
+});
+
 const photoDialog = document.getElementById('photo-dialog');
 const dialogImage = document.getElementById('dialog-image');
 const dialogCaption = document.getElementById('dialog-caption');

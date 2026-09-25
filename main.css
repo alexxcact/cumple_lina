@@ -13,3 +13,35 @@
 @media(max-width:620px){.site-header{height:72px;width:calc(100% - 38px)}.site-header>span{font-size:9px}.hero{width:calc(100% - 38px);display:flex;flex-direction:column;align-items:stretch;gap:0;margin:30px auto 60px}.hero-copy{padding:0}h1{font-size:clamp(58px,15vw,82px);margin-bottom:22px}.hero-intro{font-size:15px;margin-bottom:22px}.hero-art{height:490px;margin-top:22px}.sun-disc{width:min(93%,440px);top:30px;left:3%}.hero-photo-frame{height:418px;width:min(75%,310px)}.sticker-top{right:-4px;top:46px}.sticker-bottom{left:2px;bottom:30px}.doodle-one{top:5px}.doodle-two{bottom:0}.letter-section{padding:84px 18px 92px}.section-heading{margin-bottom:35px}.section-heading h2{font-size:clamp(42px,11vw,58px)}.letter-card{padding:68px 25px 36px}.letter-card p{font-size:16px;line-height:1.8}.letter-stamp{right:22px;top:18px;width:58px;height:58px}.memories-section{padding:85px 18px 100px}.photo-grid{gap:15px;padding:2px}.memory-photo{padding:6px 6px 44px}.memory-photo img{height:220px}.memory-photo span{font-size:11px}.closing{padding:83px 18px}}
 @media(max-width:390px){.hero-art{height:440px}.hero-photo-frame{height:370px}.sticker{font-size:14px;padding:8px 10px}.photo-grid{gap:10px}.memory-photo img{height:175px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* La carta que abre la sorpresa */
+body.is-locked{overflow:hidden}
+.intro{position:fixed;inset:0;z-index:5000;display:grid;place-items:center;overflow-y:auto;padding:34px 20px;background:radial-gradient(circle at 50% 48%,#fff9f2 0,#f8e9df 60%,#efd5cc 100%);text-align:center;transition:opacity .55s ease,visibility .55s ease}
+.intro[hidden]{display:none}
+.intro:before,.intro:after{content:'✧';position:absolute;color:#cc7f81;font-family:Georgia,serif;font-size:85px;opacity:.55;pointer-events:none}
+.intro:before{top:10%;left:14%;transform:rotate(-14deg)}
+.intro:after{bottom:12%;right:13%;font-size:110px;transform:rotate(18deg)}
+.intro-content{position:relative;z-index:1;width:min(100%,640px)}
+.intro-eyebrow{color:var(--rose);font-size:11px;font-weight:bold;letter-spacing:.23em;margin:0 0 19px}
+.intro h2{font-size:clamp(48px,7vw,82px);line-height:1.06;letter-spacing:-.065em;margin:0 0 14px}
+.intro-subtitle{color:var(--muted);font-size:16px;line-height:1.6;margin-bottom:44px}
+.envelope-trigger{display:flex;flex-direction:column;align-items:center;gap:27px;margin:0 auto;background:none;border:0;padding:0;cursor:pointer;color:var(--ink)}
+.envelope-trigger:focus-visible{outline:3px solid var(--rose);outline-offset:9px;border-radius:6px}
+.envelope{position:relative;display:block;width:min(74vw,340px);height:min(48vw,220px);filter:drop-shadow(0 22px 20px #8d555446);transition:transform .35s ease;perspective:700px}
+.envelope-trigger:hover .envelope{transform:translateY(-7px) rotate(-2deg)}
+.envelope-back,.envelope-front,.envelope-flap,.envelope-letter{position:absolute;display:block}
+.envelope-back{inset:0;background:#cc807f;border-radius:5px}
+.envelope-letter{z-index:1;top:18%;left:10%;width:80%;height:70%;padding-top:42px;background:#fffdf6;border:1px solid #eee1d9;color:var(--rose);font-family:Pacifico,cursive;font-size:clamp(18px,4vw,24px);box-shadow:0 3px 10px #8d555426;transition:transform .8s cubic-bezier(.2,.75,.25,1)}
+.envelope-letter span{display:block;font-family:Georgia,serif;font-size:29px;line-height:1.2}
+.envelope-front{z-index:2;inset:0;background:#e9aaa2;clip-path:polygon(0 0,50% 51%,100% 0,100% 100%,0 100%);border-radius:5px}
+.envelope-flap{z-index:3;inset:0;background:#f0bbb2;clip-path:polygon(0 0,100% 0,50% 63%);transform-origin:50% 0;transition:transform .7s ease;backface-visibility:hidden}
+.envelope-seal{z-index:4;position:absolute;top:50%;left:50%;width:45px;height:45px;display:grid;place-items:center;transform:translate(-50%,-50%);border-radius:50%;background:#b95d6d;color:#fff;font-family:Georgia,serif;font-size:28px;line-height:1;box-shadow:0 3px 8px #8d55543b;transition:opacity .25s ease}
+.open-label{display:inline-flex;gap:24px;align-items:center;border:1px solid #ad6973;border-radius:999px;padding:14px 22px;color:var(--rose);font-size:14px;font-weight:bold;letter-spacing:.03em;transition:background .2s,color .2s}
+.envelope-trigger:hover .open-label{background:var(--rose);color:white}
+.open-label span{font-size:19px;font-weight:normal}
+.intro-from{margin:32px 0 0;color:#9b6868;font-family:Pacifico,cursive;font-size:18px}
+.intro.is-opening .envelope-flap{transform:rotateX(180deg)}
+.intro.is-opening .envelope-seal{opacity:0}
+.intro.is-opening .envelope-letter{transform:translateY(-78px)}
+.intro.is-revealing{opacity:0;visibility:hidden;pointer-events:none}
+@media(max-width:620px){.intro{padding:24px 18px}.intro:before{top:6%;left:5%;font-size:55px}.intro:after{right:5%;bottom:8%;font-size:70px}.intro h2{font-size:clamp(45px,12vw,68px)}.intro-subtitle{font-size:14px;margin-bottom:40px}.envelope{width:min(78vw,320px);height:min(50vw,210px)}.envelope-letter{padding-top:28px}.intro-from{margin-top:26px}}

@@ -9,8 +9,27 @@
   <link rel="icon" href="src/cake.png">
   <link rel="stylesheet" href="main.css">
   <script src="main.js" defer></script>
+  <noscript><style>.intro{display:none!important}body.is-locked{overflow:auto!important}</style></noscript>
 </head>
-<body>
+<body class="is-locked">
+  <div class="intro" id="intro" role="dialog" aria-modal="true" aria-labelledby="intro-title">
+    <div class="intro-content">
+      <p class="intro-eyebrow">DE KAROLINA, PARA LINA</p>
+      <h2 id="intro-title">Aquí está tu <em>sorpresa.</em></h2>
+      <p class="intro-subtitle">Una carta hecha con mucho cariño, solo para ti.</p>
+      <button class="envelope-trigger" id="open-surprise" type="button" aria-label="Abrir tu sorpresa">
+        <span class="envelope" aria-hidden="true">
+          <span class="envelope-back"></span>
+          <span class="envelope-letter">Para Lina <span>♡</span></span>
+          <span class="envelope-front"></span>
+          <span class="envelope-flap"></span>
+          <span class="envelope-seal">♡</span>
+        </span>
+        <span class="open-label">Abre tu carta <span aria-hidden="true">↗</span></span>
+      </button>
+      <p class="intro-from">Con cariño, Karolina ♡</p>
+    </div>
+  </div>
   <header class="site-header">
     <a class="brand" href="#inicio" aria-label="Volver al inicio">L <span>♡</span> K</a>
     <span>Una sorpresa para ti</span>
@@ -19,7 +38,7 @@
     <section class="hero" id="inicio" aria-labelledby="hero-title">
       <div class="hero-copy">
         <p class="eyebrow">DE KAROLINA, PARA LINA</p>
-        <h1 id="hero-title">Feliz<br><em>cumpleaños,</em><br>Lina<span class="dot">.</span></h1>
+        <h1 id="hero-title" tabindex="-1">Feliz<br><em>cumpleaños,</em><br>Lina<span class="dot">.</span></h1>
         <p class="hero-intro">Hoy quiero celebrar tu vida, tu sonrisa y la suerte de haberte encontrado en mi camino.</p>
         <a class="primary-button" href="#carta">Lee tu carta <span aria-hidden="true">↗</span></a>
         <p class="hero-hint">Hecha con cariño, recuerdos y un poquito de risa.</p>
